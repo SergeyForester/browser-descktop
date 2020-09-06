@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="133.0" prefWidth="219.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.WeatherController">
+   <children>
+      <TextField fx:id="weatherTextField" layoutX="14.0" layoutY="14.0" promptText="Enter city name" text="Enter city name" />
+      <Button fx:id="weatherSubmitBtn" layoutX="170.0" layoutY="14.0" mnemonicParsing="false" text="Go" />
+      <Label fx:id="cityName" layoutX="14.0" layoutY="46.0" text="">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="weatherData" layoutX="13.0" layoutY="72.0" text="" />
+   </children>
+</AnchorPane>

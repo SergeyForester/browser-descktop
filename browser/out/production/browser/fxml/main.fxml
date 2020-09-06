@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.web.*?>
+
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="916.0" stylesheets="@css/style.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.MainController">
+    <StackPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <TextField fx:id="searchTextField" maxHeight="1.7976931348623157E308" promptText="Enter your query">
+            <font>
+                <Font name="Calibri" size="18.0" />
+            </font>
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </TextField>
+        <Button fx:id="searchBtn" text="Search" StackPane.alignment="TOP_RIGHT">
+            <font>
+                <Font name="Calibri" size="18.0" />
+            </font>
+        </Button>
+    </StackPane>
+    <AnchorPane>
+        <TabPane fx:id="openedTabsPane" styleClass="tab-pane" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <Tab fx:id="initTab" closable="true" styleClass="tab" text="New tab">
+                <StackPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
+                    <WebView fx:id="mainWebView" prefHeight="1200.0" prefWidth="-1.0" />
+                </StackPane>
+            </Tab>
+        </TabPane>
+        <HBox AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="1.0">
+            <Button fx:id="newTab" text="+" />
+            <MenuBar>
+                <Menu text="...">
+                    <MenuItem fx:id="weatherMenuItem" text="Weather" />
+                    <MenuItem text="TV program" />
+                    <MenuItem text="Translate" />
+                    <MenuItem fx:id="settingsMenuItem" text="Settings" />
+                </Menu>
+            </MenuBar>
+        </HBox>
+    </AnchorPane>
+    <StackPane>
+        <Label alignment="CENTER" contentDisplay="CENTER" text="Browser, made by Serge Burik" />
+    </StackPane>
+</VBox>

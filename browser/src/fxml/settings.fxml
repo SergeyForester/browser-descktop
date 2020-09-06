@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="653.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.SettingsController">
+   <children>
+      <Label layoutX="14.0" layoutY="14.0" text="Settings">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Button fx:id="historyBtn" layoutX="15.0" layoutY="49.0" mnemonicParsing="false" style="-fx-background-color: #fbfbfb;" text="History" />
+      <Button fx:id="bookmarksBtn" layoutX="79.0" layoutY="49.0" mnemonicParsing="false" style="-fx-background-color: #fbfbfb;" text="Bookmarks" />
+      <Button fx:id="searchesBtn" layoutX="165.0" layoutY="49.0" mnemonicParsing="false" style="-fx-background-color: #fbfbfb;" text="Searches" />
+      <ListView fx:id="dataList" layoutX="2.0" layoutY="94.0" prefHeight="304.0" prefWidth="647.0" />
+   </children>
+</AnchorPane>
