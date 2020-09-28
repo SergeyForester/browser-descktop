@@ -39,6 +39,7 @@
                     <MenuItem fx:id="weatherMenuItem" text="Weather" />
                     <MenuItem text="TV program" />
                     <MenuItem text="Translate" />
+                    <MenuItem text="Bookmark this page" fx:id="bookmarkPage" />
                     <MenuItem fx:id="settingsMenuItem" text="Settings" />
                 </Menu>
             </MenuBar>

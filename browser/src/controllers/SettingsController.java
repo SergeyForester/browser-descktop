@@ -64,7 +64,7 @@ public class SettingsController {
                 List<String> historiesList = new ArrayList<>();
 
                 for (History history: histories) {
-                    historiesList.add(history.getUrl());
+                    historiesList.add(history.getTitle());
                 }
 
                 dataList.getItems().addAll(historiesList);
@@ -85,7 +85,7 @@ public class SettingsController {
                 List<String> bookmarksList = new ArrayList<>();
 
                 for (Bookmark bookmark: bookmarks) {
-                    bookmarksList.add(bookmark.getUrl());
+                    bookmarksList.add(bookmark.getTitle());
                 }
 
                 dataList.getItems().addAll(bookmarksList);

@@ -8,6 +8,7 @@ import java.util.Objects;
 public class Bookmark {
     private int id;
     private String url;
+    private String title;
 
     @Id
     @Column(name = "id")
@@ -17,6 +18,16 @@ public class Bookmark {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    @Basic
+    @Column(name = "title_")
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
     }
 
     @Basic

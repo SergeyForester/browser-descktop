@@ -1,6 +1,8 @@
 package controllers;
 
 import db.DBController;
+import db.DBController;
+import controllers.HibernateInit;
 import javafx.collections.ObservableList;
 import javafx.concurrent.Worker;
 import javafx.event.ActionEvent;
@@ -22,12 +24,14 @@ import javafx.scene.web.WebHistory;
 import javafx.scene.web.WebView;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
+import models.Bookmark;
 import models.History;
 import models.Search;
 import org.controlsfx.control.textfield.TextFields;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
+import services.HistoryService;
 import utils.ListUtils;
 
 import java.io.IOException;
@@ -51,6 +55,9 @@ public class MainController {
     public Button newTab;
 
     @FXML
+    public MenuItem bookmarkPage;
+
+    @FXML
     public TabPane openedTabsPane;
 
     @FXML
@@ -59,11 +66,13 @@ public class MainController {
     @FXML
     public MenuItem weatherMenuItem;
 
+    HistoryService historyService = new HistoryService();
+
+    final Session session = HibernateInit.getSession();
+
+
     @FXML
     private void initialize() {
-        // load DB session
-        final Session session = HibernateInit.getSession();
-
 
         // load initial page
         WebEngine engine = mainWebView.getEngine();
@@ -75,31 +84,15 @@ public class MainController {
                 System.out.println(history.get(history.size() - 1));
 
                 // save to db
-                Transaction transaction = null;
-                try {
-                    transaction = session.beginTransaction();
+                WebHistory.Entry historyObject = history.get(history.size() - 1);
 
-                    History newHistory = new History();
+                historyService.save(session, historyObject.getUrl(), historyObject.getTitle());
 
-                    WebHistory.Entry historyObject = history.get(history.size() - 1);
-
-                    newHistory.setUrl(historyObject.getUrl());
-                    newHistory.setDatetime(new Timestamp(new Date().getTime()));
-
-                    if (historyObject.getTitle().length() > 20) {
-                        initTab.setText(historyObject.getTitle().substring(0, 20) + "..");
-                    } else {
-                        initTab.setText(historyObject.getTitle());
-                    }
-
-                    session.clear();
-                    session.save(newHistory);
-                    transaction.commit();
-                } catch (HibernateException e) {
-                    transaction.rollback();
-                    e.printStackTrace();
+                if (historyObject.getTitle().length() > 20) {
+                    initTab.setText(historyObject.getTitle().substring(0, 20) + "..");
+                } else {
+                    initTab.setText(historyObject.getTitle());
                 }
-
             }
         });
 
@@ -137,7 +130,6 @@ public class MainController {
                 openedTabsPane.getTabs().add(newTab);
 
                 newTab.getTabPane().setTabClosingPolicy(TabPane.TabClosingPolicy.SELECTED_TAB);
-                newTab.setClosable(true);
 
                 newTabEngine.getLoadWorker().stateProperty().addListener((ov, oldState, newState) -> {
                     if (newState == Worker.State.SUCCEEDED) {
@@ -145,29 +137,15 @@ public class MainController {
                         System.out.println(history.get(history.size() - 1));
 
                         // save to db
-                        Transaction transaction = null;
-                        try {
-                            transaction = session.beginTransaction();
+                        WebHistory.Entry historyObject = history.get(history.size() - 1);
 
-                            History newHistory = new History();
+                        historyService.save(session, historyObject.getUrl(), historyObject.getTitle());
 
-                            WebHistory.Entry historyObject = history.get(history.size() - 1);
 
-                            newHistory.setUrl(historyObject.getUrl());
-                            newHistory.setDatetime(new Timestamp(new Date().getTime()));
-
-                            if (historyObject.getTitle().length() > 10) {
-                                newTab.setText(historyObject.getTitle().substring(0, 10) + "..");
-                            } else {
-                                newTab.setText(historyObject.getTitle());
-                            }
-
-                            session.clear();
-                            session.save(newHistory);
-                            transaction.commit();
-                        } catch (HibernateException e) {
-                            transaction.rollback();
-                            e.printStackTrace();
+                        if (historyObject.getTitle().length() > 10) {
+                            newTab.setText(historyObject.getTitle().substring(0, 10) + "..");
+                        } else {
+                            newTab.setText(historyObject.getTitle());
                         }
 
                     }
@@ -180,8 +158,14 @@ public class MainController {
         settingsMenuItem.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                showDialog("/fxml/settings.fxml");
-
+                try {
+                    openedTabsPane.getTabs().add(new Tab("Settings",
+                            FXMLLoader.load(
+                                    getClass().getResource("/fxml/settings.fxml"))
+                    ));
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
 
             }
         });
@@ -193,6 +177,37 @@ public class MainController {
             @Override
             public void handle(ActionEvent actionEvent) {
                 showDialog("/fxml/weather.fxml");
+            }
+        });
+
+        // bookmark page
+        bookmarkPage.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent actionEvent) {
+
+                // save to db
+                Transaction transaction = null;
+                try {
+                    transaction = session.beginTransaction();
+
+                    ObservableList<WebHistory.Entry> history = engine.getHistory().getEntries();
+                    WebHistory.Entry historyObject = history.get(history.size() - 1);
+
+                    Bookmark bookmark = new Bookmark();
+                    bookmark.setUrl(historyObject.getUrl());
+                    bookmark.setTitle(historyObject.getTitle());
+
+                    session.clear();
+                    session.save(bookmark);;
+                    transaction.commit();
+
+                    // clear field
+                    searchTextField.setText("");
+                } catch (HibernateException e) {
+                    transaction.rollback();
+                    e.printStackTrace();
+                }
+
             }
         });
 
@@ -210,6 +225,13 @@ public class MainController {
 
                 webView.getEngine().load("https://yandex.ru/search/?text=" + searchTextField.getText());
 
+
+                // save to db
+                ObservableList<WebHistory.Entry> history = engine.getHistory().getEntries();
+                WebHistory.Entry historyObject = history.get(history.size() - 1);
+
+                historyService.save(session, historyObject.getUrl(), historyObject.getTitle());
+
                 // save to db
                 Transaction transaction = null;
                 try {
@@ -218,15 +240,11 @@ public class MainController {
                     Search newSearch = new Search();
                     newSearch.setValue(searchTextField.getText());
 
-                    History newHistory = new History();
-                    newHistory.setUrl("https://yandex.ru/search/?text=" + searchTextField.getText());
-                    newHistory.setDatetime(new Timestamp(new Date().getTime()));
-
                     session.clear();
                     session.save(newSearch);
-                    session.save(newHistory);
                     transaction.commit();
 
+                    // clear field
                     searchTextField.setText("");
                 } catch (HibernateException e) {
                     transaction.rollback();

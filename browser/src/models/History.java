@@ -1,20 +1,30 @@
 package models;
 
-import javax.persistence.Basic;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.sql.Timestamp;
 import java.util.Objects;
 
 @Entity
 public class History {
-    private int id;
-    private String url;
-    private Timestamp datetime;
 
     @Id
-    @Column(name = "id")
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "id", updatable = false, nullable = false)
+    private int id;
+
+    @Basic
+    @Column(name = "url")
+    private String url;
+
+    @Basic
+    @Column(name = "title_")
+    private String title;
+
+    @Basic
+    @Column(name = "datetime")
+    private Timestamp datetime;
+
+
     public int getId() {
         return id;
     }
@@ -23,8 +33,7 @@ public class History {
         this.id = id;
     }
 
-    @Basic
-    @Column(name = "url")
+
     public String getUrl() {
         return url;
     }
@@ -33,14 +42,20 @@ public class History {
         this.url = url;
     }
 
-    @Basic
-    @Column(name = "datetime")
     public Timestamp getDatetime() {
         return datetime;
     }
 
     public void setDatetime(Timestamp datetime) {
         this.datetime = datetime;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
     }
 
     @Override

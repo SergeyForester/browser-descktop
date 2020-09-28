@@ -6,7 +6,23 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="729a9e7c-4a88-48b1-a8a8-06abf9f44370" name="Default Changelist" comment="" />
+    <list default="true" id="729a9e7c-4a88-48b1-a8a8-06abf9f44370" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/HistoryService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/browser/fxml/main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/browser/fxml/main.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/browser/fxml/settings.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/browser/fxml/settings.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/browser/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/browser/hibernate.cfg.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/SettingsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/SettingsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fxml/main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/fxml/main.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fxml/settings.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/fxml/settings.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/hibernate.cfg.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/Bookmark.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Bookmark.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/History.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/History.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/Translate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/Translate.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -26,6 +42,10 @@
     <expand />
     <select />
   </component>
+  <component name="ErrorTreeViewConfiguration">
+    <option name="autoscrollToSource" value="true" />
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="true" />
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -36,7 +56,11 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
   <component name="ProjectId" id="1g6VygmtoN1bI7C3o5ejo05i2ZL" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -50,20 +74,24 @@
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="C:/Program Files/Java/javafx-sdk-14.0.2.1/lib" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../photos/photos" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Serg\Documents\GitHub\browser-descktop\browser\src" />
+    </key>
     <key name="ImportMappingsDialog.RecentPackages">
       <recent name="models" />
     </key>
@@ -72,8 +100,8 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Main" />
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="main.Main" />
       <module name="browser" />
       <option name="VM_PARAMETERS" value="--module-path &quot;C:\Program Files\Java\javafx-sdk-14.0.2.1\lib&quot; --add-modules javafx.controls,javafx.web,javafx.fxml --add-exports javafx.base/com.sun.javafx.event=ALL-UNNAMED" />
       <method v="2">
@@ -100,6 +128,10 @@
       <workItem from="1597473395904" duration="35000" />
       <workItem from="1597473458025" duration="13796000" />
       <workItem from="1597577798852" duration="9795000" />
+      <workItem from="1599412571862" duration="652000" />
+      <workItem from="1599488166176" duration="19000" />
+      <workItem from="1601269539327" duration="260000" />
+      <workItem from="1601303575713" duration="6060000" />
     </task>
     <servers />
   </component>
@@ -111,18 +143,26 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="181" key="#Project_Structure/0.0.1920.1040@0.0.1920.1040" timestamp="1597436166377" />
-    <state x="552" y="181" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1597476891382">
+    <state x="0" y="0" width="1920" height="1040" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1601317952850">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="181" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1597476891382" />
+    <state x="0" y="0" width="1920" height="1040" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1601317952850" />
+    <state x="590" y="254" key="#com.intellij.ide.util.ExportDialog" timestamp="1601316741049">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="590" y="254" key="#com.intellij.ide.util.ExportDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1601316741049" />
+    <state x="765" y="213" key="#com.intellij.ide.util.MemberChooser" timestamp="1601315765510">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="765" y="213" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1601315765510" />
     <state x="689" y="300" key="#com.intellij.ide.util.PackageChooserDialog" timestamp="1597435633021">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="689" y="300" key="#com.intellij.ide.util.PackageChooserDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1597435633021" />
-    <state x="689" y="306" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1597487927844">
+    <state x="689" y="306" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1601317999953">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="689" y="306" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1597487927844" />
+    <state x="689" y="306" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1601317999953" />
     <state x="630" y="73" key="#com.intellij.jpa.generation.ui.DatabaseSchemaImportDialog" timestamp="1597435655047">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -131,38 +171,54 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="270" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1597581544313" />
-    <state x="666" y="264" key="FileChooserDialogImpl" timestamp="1597436261698">
+    <state x="666" y="264" key="FileChooserDialogImpl" timestamp="1599488183159">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="666" y="264" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1597436261698" />
-    <state width="1877" height="311" key="GridCell.Tab.0.bottom" timestamp="1597586011577">
+    <state x="666" y="264" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1599488183159" />
+    <state width="1877" height="483" key="GridCell.Tab.0.bottom" timestamp="1601318012985">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="311" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1597586011577" />
-    <state width="1877" height="311" key="GridCell.Tab.0.center" timestamp="1597586011577">
+    <state width="1877" height="483" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1601318012985" />
+    <state width="1877" height="483" key="GridCell.Tab.0.center" timestamp="1601318012985">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="311" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1597586011577" />
-    <state width="1877" height="311" key="GridCell.Tab.0.left" timestamp="1597586011577">
+    <state width="1877" height="483" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1601318012985" />
+    <state width="1877" height="483" key="GridCell.Tab.0.left" timestamp="1601318012984">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="311" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1597586011577" />
-    <state width="1877" height="311" key="GridCell.Tab.0.right" timestamp="1597586011577">
+    <state width="1877" height="483" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1601318012984" />
+    <state width="1877" height="483" key="GridCell.Tab.0.right" timestamp="1601318012985">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="311" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1597586011577" />
-    <state x="440" y="97" key="SettingsEditor" timestamp="1597585369199">
+    <state width="1877" height="483" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1601318012985" />
+    <state width="1877" height="252" key="GridCell.Tab.1.bottom" timestamp="1601316350142">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="440" y="97" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1597585369199" />
-    <state x="668" y="347" key="com.intellij.ide.util.TipDialog" timestamp="1597577833313">
+    <state width="1877" height="252" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1601316350142" />
+    <state width="1877" height="252" key="GridCell.Tab.1.center" timestamp="1601316350142">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="668" y="347" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1597577833313" />
-    <state x="664" y="421" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1597585331035">
+    <state width="1877" height="252" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1601316350142" />
+    <state width="1877" height="252" key="GridCell.Tab.1.left" timestamp="1601316350142">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="664" y="421" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1920.1040@0.0.1920.1040" timestamp="1597585331035" />
+    <state width="1877" height="252" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1601316350142" />
+    <state width="1877" height="252" key="GridCell.Tab.1.right" timestamp="1601316350142">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="252" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1601316350142" />
+    <state x="440" y="97" key="SettingsEditor" timestamp="1601318002730">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="440" y="97" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1601318002730" />
+    <state x="668" y="347" key="com.intellij.ide.util.TipDialog" timestamp="1601303593346">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="668" y="347" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1601303593346" />
+    <state x="664" y="421" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1601316673357">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="664" y="421" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1920.1040@0.0.1920.1040" timestamp="1601316673357" />
     <state x="343" y="146" key="new project wizard" timestamp="1597474864054">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
